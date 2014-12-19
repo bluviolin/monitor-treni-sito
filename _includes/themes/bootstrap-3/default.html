@@ -9,6 +9,8 @@
     <meta name="author" content="{{ site.author.name }}">
     <link rel="author" href="{{ site.author.www }}" />
     <link rel="author" href="https://plus.google.com/{{ site.author.googleplus }}" />
+{% capture canonical %}{{ site.production_url }}{% if page.url != '/index.html' %}{{ page.url }}{% else %}/{% endif %}{% endcapture %}
+    <link rel="canonical" href="{{ canonical }}" />
     <!-- Enable responsive viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -57,7 +59,7 @@
     <meta property="og:site_name" content="{{ site.title }}" />
     <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
     <meta property="og:title" content="{% if page.title %}{{page.title}}{% else %}{{ site.title }}{% endif %}" />
-    <meta property="og:url" content="TODO" />
+    <meta property="og:url" content="{{ canonical }}" />
     <meta property="og:image" content="TODO" />
     {% if site.fb_admins %}<meta property="fb:admins" content="{{ site.fb_admins }}" />{% endif %}
 
