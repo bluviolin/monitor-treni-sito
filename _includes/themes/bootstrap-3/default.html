@@ -75,6 +75,7 @@
 
   <body>
     <div id="wrap">
+     <header>
       <nav class="navbar navbar-default" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -97,19 +98,21 @@
           </ul> <!-- / ul.navbar-social -->
         </div><!-- /.navbar-collapse -->
       </nav>
+     </header>
 
       <div class="container">
         {{ content }}
-      </div>
-    </div>
+      </div> <!-- /div.container -->
 
-    <div id="footer">
+    </div> <!-- /div#wrap -->
+
+    <footer id="footer">
       <div class="container">
         <p>Sito realizzato da <a rel="author" href="{{ site.author.www }}">{{ site.author.name }}</a>
           basato su <a href="http://jekyllbootstrap.com/" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a> e ospitato su <a href="https://pages.github.com/">GitHub Pages</a>.
         </p>
       </div>
-    </div>
+    </footer> <!-- /footer#footer -->
 
     <!-- Google analytics -->
     <script type="text/javascript">
