@@ -7,6 +7,7 @@ layout: null
         <loc>{{ site.production_url }}</loc>
         <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
         <changefreq>monthly</changefreq>
+        <priority>1</priority>
     </url>
     
     {% for post in site.posts %}
@@ -18,6 +19,11 @@ layout: null
         <lastmod>{{ post.lastmod | date_to_xmlschema }}</lastmod>
       {% endif %}
         <changefreq>monthly</changefreq>
+      {% if post.sitemap.priority %}
+         <priority>{{ post.sitemap.priority }}</priority>
+      {% else %}
+         <priority>0.7</priority>
+      {% endif %}
     </url>
     {% endfor %}
     {% for page in site.pages %}
