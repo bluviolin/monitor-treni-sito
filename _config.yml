@@ -12,6 +12,7 @@ title : TEST
 description: DA COMPLETARE
 tagline:
 language: it
+language_TERRITORY: it_IT
 image: http://monitor-treni-files.fabriziotarizzo.org/images/Stazione_Villanova.jpg
 
 #Twitter card
