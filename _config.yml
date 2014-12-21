@@ -11,11 +11,12 @@ highlighter: pygments
 title : TEST
 description: DA COMPLETARE
 tagline:
+language: it
+image: http://monitor-treni-files.fabriziotarizzo.org/images/Stazione_Villanova.jpg
 
 #Twitter card
 twitter:
   username: TODO
-  image: dasdasdasd.jpg
 
 #Facebook insights
 fb_admins: 1289005338
