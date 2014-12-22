@@ -83,6 +83,8 @@ h1, h2, h3, h4 {
 ul.navbar-social li {margin:-0.75em; padding:0}
 ul.navbar-social img {width:25px; height:25px}
 .navbar-header a {font-size:1.5em}
+#social-buttons>div {float:left;padding-left:0.75em}
+#social-buttons hr {clear:both;display:none}
 
 tfoot{border-top:solid 2px}
 td,th {border:solid 1px}
