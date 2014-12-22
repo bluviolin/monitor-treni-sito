@@ -10,26 +10,26 @@ highlighter: pygments
 #
 title : TEST
 description: DA COMPLETARE
-tagline:
-language: it
-language_TERRITORY: it_IT
+#tagline:
+locale:
+  language: it
+  territory: IT
 image: http://monitor-treni-files.fabriziotarizzo.org/images/Stazione_Villanova.jpg
 
-#Twitter card
-twitter:
-  username: TODO
+#Social: FB open graph, Twitter card, ...
+social:
+  twitter:
+    username: TODO
+  facebook:
+    fb_admins: 1289005338
 
-#Facebook insights
-fb_admins: 1289005338
-#Facebook open graph
-
-author :
-  name : Fabrizio Tarizzo
-  email : monitor.siti@fabriziotarizzo.org
-  github : bluviolin
-  twitter : bluvi0lin
-  www : http://www.fabriziotarizzo.org/
-  googleplus : 111630841719489305570
+author:
+  name: Fabrizio Tarizzo
+  email: monitor.treni@fabriziotarizzo.org
+  github: bluviolin
+  twitter: bluvi0lin
+  www: http://www.fabriziotarizzo.org/
+  googleplus: 111630841719489305570
 #  feedburner : feedname
 
 # The production_url is only used when full-domain names are needed

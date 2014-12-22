@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html lang="{{ site.language }}" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# dc: http://purl.org/dc/elements/1.1/">
+<html lang="{{ site.locale.language }}" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# dc: http://purl.org/dc/elements/1.1/">
   <head>
+{% capture title %}{% if page.title %}{{page.title}}{% else %}{{ site.title }}{% endif %}{% endcapture %}
+{% capture description %}{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}{% endcapture %}
+{% capture canonical %}{{ site.production_url }}{% if page.url != '/index.html' %}{{ page.url }}{% else %}/{% endif %}{% endcapture %}
+{% capture image %}{% if page.image %}{{ page.image }}{% else %}{{ site.image }}{% endif %}{% endcapture %}
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <title>{% if page.title %}{{page.title}}{% else %}{{ site.title }}{% endif %}</title>
-    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description }}">
     <meta name="author" content="{{ site.author.name }}">
-    <link rel="author" href="{{ site.author.www }}" />
-    <link rel="author" href="https://plus.google.com/{{ site.author.googleplus }}" />
-{% capture canonical %}{{ site.production_url }}{% if page.url != '/index.html' %}{{ page.url }}{% else %}/{% endif %}{% endcapture %}
-    <link rel="canonical" href="{{ canonical }}" />
+    <link rel="author" href="{{ site.author.www }}">
+    <link rel="author" href="https://plus.google.com/{{ site.author.googleplus }}">
+    <link rel="canonical" href="{{ canonical }}">
     <!-- Enable responsive viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <!-- Bootstrap styles -->
     <link href="{{ ASSET_PATH }}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Optional theme -->
     <link href="{{ ASSET_PATH }}/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
     <!-- Sticky Footer -->
     <link href="{{ ASSET_PATH }}/bootstrap/css/bs-sticky-footer.css" rel="stylesheet">
-    
     <!-- Custom styles -->
     <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
 
@@ -40,38 +40,44 @@
     -->
 
     <!-- atom & rss feed -->
-    <link href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
-    <link href="{{ BASE_PATH }}{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+    <link href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="Feed ATOM">
+    <link href="{{ BASE_PATH }}{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="Feed RSS">
     <!-- Navigation links -->
     {% if page.previous %}<link rel="prev" href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">{% endif %}
     {% if page.next %}<link rel="next" href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">{% endif %}
 
     <!-- Twitter card metadata -->
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@{{ site.twitter.username }}" />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@{{ site.social.twitter.username }}">
     {% if site.author.twitter %}<meta name="twitter:creator" content="@{{ site.author.twitter }}">{% endif %}
-    <meta name="twitter:title" content="{% if page.title %}{{page.title}}{% else %}{{ site.title }}{% endif %}" />
-    <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
-    <meta name="twitter:image" content="{{ site.image }}" />
+    <meta name="twitter:title" content="{{ title }}">
+    <meta name="twitter:description" content="{{ description }}">
+    <meta name="twitter:image" content="{{ image }}">
 
-    <!-- TODO Facebook Open graph metadata -->
-    <meta property="og:type" content="{% if page.title %}article{% else %}website{% endif %}" />
-    <meta property="og:site_name" content="{{ site.title }}" />
-    <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
-    <meta property="og:title" content="{% if page.title %}{{page.title}}{% else %}{{ site.title }}{% endif %}" />
-    <meta property="og:url" content="{{ canonical }}" />
-    <meta property="og:image" content="{{ site.image }}" />
-    <meta property="og:locale" content="{{ site.language_TERRITORY }}" />
-    {% if site.fb_admins %}<meta property="fb:admins" content="{{ site.fb_admins }}" />{% endif %}
+    <!-- Facebook Open graph metadata -->
+    {% if page.is_homepage %}
+    <meta property="og:type" content="website">
+    {% else %}
+    <meta property="og:type" content="article">
+    {% if page.date %}<meta property="og:article:published_time" content="{{ page.date | date_to_xmlschema }}">{% endif %}
+    {% if page.lastmod %}<meta property="og:article:modified_time" content="{{ page.lastmod | date_to_xmlschema }}">{% endif %}
+    {% endif %}
+    <meta property="og:site_name" content="{{ site.title }}">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:url" content="{{ canonical }}">
+    <meta property="og:image" content="{{ image }}">
+    <meta property="og:locale" content="{{ site.locale.language }}_{{ site.locale.territory }}">
+    <meta property="fb:admins" content="{{ site.social.facebook.fb_admins }}">
 
     <!-- Dublin core metadata -->
-    <meta property="dc:creator" content="{{ site.author.name }}" />
-    <meta property="dc:title" content="{% if page.title %}{{page.title}}{% else %}{{ site.title }}{% endif %}" />
-    <meta property="dc:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta property="dc:creator" content="{{ site.author.name }}">
+    <meta property="dc:title" content="{{ title }}">
+    <meta property="dc:description" content="{{ description }}">
     {% if page.lastmod == null and page.date != null %}
-    <meta property="dc:date" content="{{ page.date | date_to_xmlschema }}"/>
+    <meta property="dc:date" content="{{ page.date | date_to_xmlschema }}">
     {% elsif page.lastmod != null %}
-    <meta property="dc:date" content="{{ page.lastmod | date_to_xmlschema }}"/>
+    <meta property="dc:date" content="{{ page.lastmod | date_to_xmlschema }}">
     {% endif %}
   </head>
 
@@ -94,7 +100,7 @@
         <div class="collapse navbar-collapse" id="jb-navbar-collapse">
          <ul class="nav navbar-nav navbar-right navbar-social">
               <li><a href="http://www.facebook.com/FFFFF"><img alt="Facebook" src="{{ ASSET_PATH }}/images/social/facebook.png" /></a></li>
-              <li><a href="http://www.twitter.com/TTTTT"><img alt="Twitter" src="{{ ASSET_PATH }}/images/social/twitter.png" /></a></li>
+              <li><a href="http://www.twitter.com/{{ site.social.twitter.username }}"><img alt="Twitter" src="{{ ASSET_PATH }}/images/social/twitter.png" /></a></li>
               <li><a href="http://plus.google.com/GGGGGG"><img alt="Google+" src="{{ ASSET_PATH }}/images/social/google+.png" /></a></li>
               <li><a href="{{ BASE_PATH }}{{ site.JB.rss_path }}" type="application/rss+xml"><img alt="RSS Feed" src="{{ ASSET_PATH }}/images/social/rss.png" /></a></li>
           </ul> <!-- / ul.navbar-social -->
