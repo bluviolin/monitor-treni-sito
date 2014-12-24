@@ -8,7 +8,7 @@ highlighter: pygments
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : TEST
+title : Monitoraggio treni pendolari Asti-Torino
 description: DA COMPLETARE
 #tagline:
 locale:
@@ -19,9 +19,12 @@ image: http://monitor-treni-files.fabriziotarizzo.org/images/Stazione_Villanova.
 #Social: FB open graph, Twitter card, ...
 social:
   twitter:
-    username: TODO
+    username: MonitorTreniAT
   facebook:
     fb_admins: 1289005338
+    page: MonitorTreniATTO
+  googleplus:
+    page: 116233208429516676979
 
 author:
   name: Fabrizio Tarizzo
@@ -115,7 +118,7 @@ JB :
   analytics :
     provider : google 
     google : 
-        tracking_id : 'UA-123-12'
+        tracking_id : 'UA-57450544-2'
     getclicky :
       site_id : 
     mixpanel :
