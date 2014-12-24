@@ -137,7 +137,8 @@
               <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
           </div> <!-- /Twitter -->
           <div> <!-- Google+ -->
-              <script src="https://apis.google.com/js/platform.js" async defer>{lang:'it'}</script>
+              <script >window.___gcfg = {lang: 'it'};</script>
+              <script src="https://apis.google.com/js/platform.js" async defer></script>
               <div class="g-plusone" data-size="medium" data-annotation="none" data-href="{{ canonical }}"></div>
               <div class="g-plus" data-action="share" data-annotation="none" data-href="{{ canonical }}"></div>
           </div> <!-- /Google+ -->
@@ -145,7 +146,7 @@
               <a href="http://bufferapp.com/add" class="buffer-add-button" data-url="{{ canonical }}" data-count="none" data-via="{{ site.social.twitter.userbame }}"></a><script type="text/javascript" src="https://d389zggrogs7qo.cloudfront.net/js/button.js"></script>
           </div> <!-- /Buffer -->
           <div> <!-- Flattr -->
-              <a href="https://flattr.com/submit/auto?user_id=bluviolin&url={{ site.production_url | cgi_escape }}" target="_blank"><img src="//api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0"></a>
+              <a href="https://flattr.com/submit/auto?user_id=bluviolin&amp;url={{ site.production_url | cgi_escape }}" target="_blank"><img src="//api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0"></a>
           </div> <!-- /Flattr -->
 
           
