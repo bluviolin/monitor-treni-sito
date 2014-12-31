@@ -9,7 +9,7 @@ highlighter: pygments
 # so be sure to set them if your theme uses them.
 #
 title : Monitoraggio treni pendolari Asti-Torino
-description: DA COMPLETARE
+description: Il sito presenta report periodici sull'andamento dei treni pendolari Asti-Torino, basati su dati estratti dal sistema Viaggiatreno di Trenitalia integrati da osservazioni effettuate individualmente dai viaggiatori.
 #tagline:
 locale:
   language: it

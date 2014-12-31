@@ -1,0 +1,17 @@
+---
+layout: page
+is_homepage: true
+---
+{% include JB/setup %}
+
+<section id="abstract">
+<p>Il sito presenta report periodici sull'andamento dei treni pendolari Asti-Torino, basati su dati estratti dal sistema Viaggiatreno di Trenitalia integrati da osservazioni effettuate individualmente dai viaggiatori.</p>
+<p>Il primo report sarà pubblicato a gennaio 2015, basato sui dati della seconda metà di dicembre 2014. Il codice usato per estrarre i dati da Viaggiatreno e generare i report sarà prossimamente reso disponibile come software libero, a disposizione di associazioni di pendolari o di singoli che vogliano monitorare sistematicamente le loro tratte.</p>
+</section>
+<section id="posts">
+<ul>
+  {% for post in site.posts %}
+    <li><a href="{{ site.production_url }}{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+</ul>
+</section>
