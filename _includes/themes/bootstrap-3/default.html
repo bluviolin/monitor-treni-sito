@@ -21,6 +21,8 @@
     <link href="{{ ASSET_PATH }}/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
     <!-- Sticky Footer -->
     <link href="{{ ASSET_PATH }}/bootstrap/css/bs-sticky-footer.css" rel="stylesheet">
+    <!-- jqueryUI -->
+    <link rel="stylesheet" href="{{ site.external_resources_url }}/js/jquery-ui-1.11.2/jquery-ui.min.css" />
     <!-- Custom styles -->
     <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
 
@@ -143,7 +145,7 @@
               <div class="fb-like" data-href="{{ canonical }}" data-layout="button" data-action="recommend" data-show-faces="false" data-share="true"></div>
           </div> <!-- /Facebook -->
           <div> <!-- Twitter -->
-              <a href="https://twitter.com/share" class="twitter-share-button" data-url="{{ canonical }}" data-via="{{ site.social.twitter.username}}" data-lang="it" data-count="none" data-hashtags="HASHTAG1 #HASHTAG2">Tweet</a>
+              <a href="https://twitter.com/share" class="twitter-share-button" data-url="{{ canonical }}" data-via="{{ site.social.twitter.username }}" data-lang="it" data-count="none" data-hashtags="HASHTAG1 #HASHTAG2">Tweet</a>
               <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
           </div> <!-- /Twitter -->
           <div> <!-- Google+ -->
@@ -153,7 +155,7 @@
               <div class="g-plus" data-action="share" data-annotation="none" data-href="{{ canonical }}"></div>
           </div> <!-- /Google+ -->
           <div> <!-- Buffer -->
-              <a href="http://bufferapp.com/add" class="buffer-add-button" data-url="{{ canonical }}" data-count="none" data-via="{{ site.social.twitter.userbame }}"></a><script type="text/javascript" src="https://d389zggrogs7qo.cloudfront.net/js/button.js"></script>
+              <a href="http://bufferapp.com/add" class="buffer-add-button" data-url="{{ canonical }}" data-count="none" data-via="{{ site.social.twitter.username }}"></a><script type="text/javascript" src="https://d389zggrogs7qo.cloudfront.net/js/button.js"></script>
           </div> <!-- /Buffer -->
           <div> <!-- Flattr -->
               <a href="https://flattr.com/submit/auto?user_id=bluviolin&amp;url={{ site.production_url | cgi_escape }}" target="_blank"><img src="//api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0"></a>
@@ -175,5 +177,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="{{ site.external_resources_url }}/js/jquery-1.11.2.min.js"></script>
     <script src="{{ site.external_resources_url }}/js/bootstrap.min.js"></script>
+    <script src="{{ site.external_resources_url }}/js/jquery-ui-1.11.2/jquery-ui.min.js"></script>
+    <script src="{{ ASSET_PATH }}/js/custom.js"></script>
   </body>
 </html>
