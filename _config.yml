@@ -9,6 +9,7 @@ highlighter: pygments
 # so be sure to set them if your theme uses them.
 #
 title : Monitoraggio treni pendolari Asti-Torino
+keywords : [pendolari,sfmtorino,sfrpiemonte,trenitalia,ritardi,piemonte,asti,torino,trenitardo]
 description: Il sito presenta report periodici sull'andamento dei treni pendolari Asti-Torino, basati su dati estratti dal sistema Viaggiatreno di Trenitalia integrati da osservazioni effettuate individualmente dai viaggiatori.
 #tagline:
 locale:
@@ -20,6 +21,7 @@ image: http://monitor-treni-files.fabriziotarizzo.org/images/Stazione_Villanova.
 social:
   twitter:
     username: MonitorTreniAT
+    hashtags: pendolari,sfmtorino,sfrpiemonte
   facebook:
     fb_admins: 1289005338
     page: MonitorTreniATTO
