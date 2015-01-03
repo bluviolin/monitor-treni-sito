@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ site.locale.language }}" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# dc: http://purl.org/dc/elements/1.1/">
   <head>
-{% capture title %}{% if page.title %}{{page.title}}{% else %}{{ site.title }}{% endif %}{% endcapture %}
+{% capture title %}{{ site.title }}{% if page.title %} &raquo; {{ page.title }}{% endif %}{% endcapture %}
 {% capture description %}{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}{% endcapture %}
 {% capture canonical %}{{ site.production_url }}{% if page.url != '/index.html' %}{{ page.url }}{% else %}/{% endif %}{% endcapture %}
 {% capture image %}{% if page.image %}{{ page.image }}{% else %}{{ site.image }}{% endif %}{% endcapture %}
@@ -169,8 +169,7 @@
     </div> <!-- /div#wrap -->
     <footer id="footer">
       <div class="container">
-        <p>Sito realizzato da <a rel="author" href="{{ site.author.www }}">{{ site.author.name }}</a> basato su <a href="http://jekyllbootstrap.com/" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a> e ospitato su <a href="https://pages.github.com/">GitHub Pages</a>. Codice sorgente su <a href="https://github.com/bluviolin/monitor-treni-sito">GitHub</a>.
-        </p>
+        <p>Sito realizzato da <a rel="author" href="{{ site.author.www }}">{{ site.author.name }}</a>. <a href="/credits.html">Ringraziamenti</a></p>
       </div>
     </footer> <!-- /footer#footer -->
 
