@@ -11,10 +11,10 @@ $(document).ready(function(){
 
                 ret = '<div>Corse monitorate: ' + num[0] + '</div>';
                 ret += '<div>Ritardo medio: ' + media + ' minuti</div>';
-                ret += '<div class="rit0-5">0-5 min.: ' + num[1] + ' (' + perc[0] + '%)</div>';
-                ret += '<div class="rit5-10">5-10 min.: ' + num[2] + ' (' + perc[1] + '%)</div>';
-                ret += '<div class="rit10-20">10-20 min.: ' + num[3] + ' (' + perc[2] + '%)</div>';
-                ret += '<div class="rit20">Oltre 20 min.: ' + num[4] + ' (' + perc[3] + '%)</div>';
+                ret += '<div class="rit0-5">&lt; 5 minuti: ' + num[1] + ' (' + perc[0] + '%)</div>';
+                ret += '<div class="rit5-10">5-10 minuti: ' + num[2] + ' (' + perc[1] + '%)</div>';
+                ret += '<div class="rit10-15">10-15 minuti: ' + num[3] + ' (' + perc[2] + '%)</div>';
+                ret += '<div class="rit15">&ge; 15 minuti: ' + num[4] + ' (' + perc[3] + '%)</div>';
                 ret += '<div class="soppressioni">Soppressi: ' + num[5] + ' (' + perc[4] + '%)</div>';
 
                 return ret;

@@ -80,10 +80,10 @@ h1, h2, h3, h4 {
 
 
 /* CUSTOM */
-ul.navbar-social li {margin:-0.75em; padding:0}
+ul.navbar-social li {margin:-0.75em 0 0 -1.6em; padding:0}
 ul.navbar-social img {width:25px; height:25px}
 .navbar-header a {font-size:1.5em}
-#social-buttons>div {float:left;padding-left:0.75em}
+#social-buttons>div {float:left;padding-right:0.75em}
 #social-buttons hr {clear:both;display:none}
 
 
@@ -91,18 +91,25 @@ tfoot{border-top:solid 2px}
 td,th {border:solid 1px}
 td {text-align:center}
 table{border-collapse:collapse;font-size:0.8em}
-colgroup.dettagliotreni{padding:0}
-colgroup.colonnadata{text-align:left}
 th[scope=row]{text-align:left}
 .rit0-5 {background-color:green}
 .rit5-10{background-color:yellow}
-.rit10-20{background-color:orange}
-.rit20{background-color:red}
+.rit10-15{background-color:orange}
+.rit15{background-color:red}
 .soppressioni{color:white;background-color:black}
 td.fascia-pendolari{font-weight:bold}
 td.barra{}
-td.barra>span{display:block;float:left}
+td.barra>span{display:inline-block}
 .barravert{text-align:center}
 .barravert>span{display:block;width:20px;margin:0 auto}
 .ui-tooltip {font-size:x-small}
 
+section#legenda>span{width:20px;display:inline-block}
+section#legenda {font-size:small}
+section#legenda h2 {font-size:1.1em}
+h1 {font-size:24px}
+h2 {font-size:20px}
+h3 {font-size:17px}
+
+h1, h2, h3, h4, h5, h6 {color:inherit}
+footer#footer {height:initial}
