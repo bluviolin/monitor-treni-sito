@@ -115,7 +115,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
+          {% if page.is_homepage %}<h1>{% endif %}<a class="navbar-brand" href="{{ HOME_PATH }}">{{ site.title }}</a>{% if page.is_homepage %}</h1>{% endif %}
         </div> <!-- / #navbar-header -->
 
         <!-- Collect the nav links, forms, and other content for toggling -->
