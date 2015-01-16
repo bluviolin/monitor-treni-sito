@@ -48,6 +48,23 @@ author:
 production_url : http://monitor-treni.fabriziotarizzo.org
 external_resources_url : http://monitor-treni-files.fabriziotarizzo.org
 
+blogroll:
+  - category: Link istituzionali
+    links:
+       - text: Regione Piemonte
+         url: http://www.regione.piemonte.it/trasporti/viaggiaPiemonte/index.htm
+       - text: SFM Torino
+         url: http://www.sfmtorino.it/
+  - category: Siti amici
+    links:
+       - text: Coordinamento Comitati Pendolari del Piemonte
+         url: http://www.pendolaripiemonte.it/
+       - text: On the Rotaie
+         url: https://ontherotaie.wordpress.com/
+       - text: Trenitardo
+         url: http://www.trenitardo.org/
+
+
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
 JB :
