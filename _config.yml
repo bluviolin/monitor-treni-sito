@@ -51,7 +51,7 @@ external_resources_url : http://monitor-treni-files.fabriziotarizzo.org
 blogroll:
   - category: Link istituzionali
     links:
-       - text: Regione Piemonte
+       - text: Viaggia Piemonte
          url: http://www.regione.piemonte.it/trasporti/viaggiaPiemonte/index.htm
        - text: SFM Torino
          url: http://www.sfmtorino.it/

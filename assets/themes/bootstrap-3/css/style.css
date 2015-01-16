@@ -111,3 +111,8 @@ h3 {font-size:17px}
 h1, h2, h3, h4, h5, h6 {color:inherit}
 footer#footer {height:initial}
 .navbar-header h1 {font-size:inherit;margin:0;padding:0}
+
+aside {font-size:small}
+aside h2 {font-size:17px;margin:0;padding:0}
+aside h3 {font-size:14px;margin:0;padding:0}
+aside ul {list-style-type:none}

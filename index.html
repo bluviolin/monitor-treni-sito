@@ -29,10 +29,11 @@ is_homepage: true
 </div> <!-- .col-md-9 -->
 <div class="col-md-3">
 <aside>
+<h2>Link</h2>
 <ul>{% for cat in site.blogroll %}
     <li><h3>{{ cat.category}}</h3>
     <ul>{% for link in cat.links %}
-       <li><a href="{{ link.url }}">{{ link.text }}</a></li>
+       <li><a class="external-link" target="_blank" href="{{ link.url }}">{{ link.text }}</a></li>
     {% endfor %}</ul>
     </li>
 {% endfor %}</ul>
