@@ -9,7 +9,7 @@ $(document).ready(function(){
 				var media = element.data('mediaritardi');
 
 				ret = '<div>Corse monitorate: ' + num[0] + '</div>';
-				if (num.length > 5) {
+				if (num.length > 6) {
 					ret += '<div>Corse con dati non disp.: ' + num[6] + '</div>';
 				}
 				ret += '<div>Ritardo medio: ' + media + ' minuti</div>';
