@@ -1,10 +1,7 @@
 #footer {background-color: #fdcd60;}
-
 /* posts index */
 .post > h3.title {position: relative;padding-top: 10px;}
-
 .post > h3.title span.date {position: absolute;right: 0;font-size: 0.9em;}
-
 .post > .more {margin: 10px 0;text-align: left;}
 
 /* post-full*/
@@ -12,28 +9,22 @@
 
 /* tag_box */
 .tag_box {list-style: none;margin: 0;overflow: hidden;}
-
 .tag_box li {line-height: 28px;}
-
 .tag_box li i {opacity: 0.9;}
-
 .tag_box.inline li {float: left;}
-
 .tag_box a {
   padding: 3px 6px;margin: 2px;
   background: #eee;color: #555;
   border-radius: 3px;
   text-decoration: none;
   border: 1px dashed #cccccc; }
-
 .tag_box a span {vertical-align: super;font-size: 0.8em;}
-
 .tag_box a:hover {background-color: #e5e5e5;}
-
 .tag_box a.active {background: #57A957;border: 1px solid #4c964d;color: #FFF;}
 
 /* CUSTOM */
-ul.navbar-social li {margin:-0.75em 0 0 -1.6em; padding:0}
+ul.navbar-social a {padding:5px 9px 0 0}
+ul.navbar-social li {margin:0; padding:0}
 ul.navbar-social img {width:25px; height:25px}
 .navbar-header a {font-size:1.5em}
 #social-buttons>div {float:left;padding-right:0.75em}
@@ -69,3 +60,4 @@ aside {font-size:small}
 aside h2 {font-size:17px;margin:0;padding:0}
 aside h3 {font-size:14px;margin:0;padding:0}
 aside ul {list-style-type:none;padding-left:1em}
+aside ul li {padding:0.15em 0}
