@@ -39,7 +39,7 @@ $(document).ready(function(){
                 
                 $('<div>').text('Corse misurate: ' + num[0]).appendTo(wrapper);
                 if (num.length > 6) {
-                    $('<div>').text('Corse con dati non disp.: ' + num[6]).appendTo(wrapper);
+                    $('<div>').text('Corse con dati non disponibili: ' + num[6]).appendTo(wrapper);
                 }
                 $('<div>').text('Ritardo medio: ' + avg.toFixed(1)).appendTo(wrapper);
                 
