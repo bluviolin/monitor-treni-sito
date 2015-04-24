@@ -1,0 +1,214 @@
+---
+layout: post
+title: Trenitalia manipola i dati sui ritardi? Forse no, ma serve più trasparenza
+date: 2015-04-24 18:29:39
+description: Confronto e analisi tra i dati dichiarati da Viaggiatreno e gli arrivi reali in stazione
+categories: misc
+---
+{% include JB/setup %}
+
+
+<section>
+<p>All'inizio di marzo il consigliere regionale <a href="http://www.cr.piemonte.it/cms/consiglieri/item/932-federico-valetti.html">Federico Valetti</a> del Movimento 5 stelle <a href="http://www.lastampa.it/2015/03/06/cronaca/trenitalia-manipola-i-dati-sui-ritardi-wDpzaJ1J6bgjV2Fef50zUK/pagina.html" title="La Stampa 06-03-2015 - &laquo;Trenitalia manipola i dati sui ritardi&raquo;">ha denunciato</a>, facendo riferimento alla linea Pinerolo-Torino-Chivasso, una presunta manipolazione da parte di Trenitalia dei dati sulla puntualità dei treni allo scopo di evitare le penali. Trenitalia ha nel mese di aprile emesso <a href="http://www.fsnews.it/fsn/Gruppo-FS-Italiane/Trenitalia/Trenitalia-destituite-di-fondamento-le-accuse-di-manipolazione-dei-dati-della-puntualita-dei-treni" title="Comunicato stampa 20-04-2015 - Trenitalia, destituite di fondamento le accuse di manipolazione dei dati della puntualità dei treni">un comunicato</a> nel quale afferma che <q cite="http://www.fsnews.it/fsn/Gruppo-FS-Italiane/Trenitalia/Trenitalia-destituite-di-fondamento-le-accuse-di-manipolazione-dei-dati-della-puntualita-dei-treni">Le rilevazioni [...] sono automatiche e avvengono con apparati elettronici ubicati lungo la linea e registrate su un sistema gestito da RFI, certificato secondo gli standard ISO/IEC 27001-2005 e vigilato dal Ministero delle Infrastrutture e Trasporti. I dati sono disponibili e consultabili dalle imprese ferroviarie e dalla Regione</q> e che <q cite="http://www.fsnews.it/fsn/Gruppo-FS-Italiane/Trenitalia/Trenitalia-destituite-di-fondamento-le-accuse-di-manipolazione-dei-dati-della-puntualita-dei-treni">nelle fermate intermedie, in assenza di apparati elettronici, [...] gli orari di arrivo/partenza o transito sono calcolati attraverso l'interpolazione dei dati automatici rilevati a monte e a valle della fermata, o con l'applicazione di correttivi matematici, senza, comunque, alcun intervento esterno discrezionale</q>.</p>
+<p>Per verificare queste affermazioni nelle scorse settimane ho rilevato personalmente un campione di orari di arrivo a Torino e in alcune stazioni intermedie (per un totale di centodue rilevazioni), confrontandoli con gli orari di arrivo dichiarati sul sistema <a href="www.viaggiatreno.it/">Viaggiatreno</a> (unici dati disponibili pubblicamente) e registrando i relativi scostamenti. I dati sono stati registrati utilizzando gli stessi arrotondamenti eseguiti da Viaggiatreno: orari di arrivo arrotondati ai trenta secondi per difetto e ritardi arrotondati al minuto intero per eccesso.</p>
+<p>La tabella seguente riporta i risultati. Per ciascuna stazione sono indicati lo scostamento medio tra il dato rilevato e quello dichiarato da Viaggiatreno nonché lo scostamento minimo e massimo (in valore assoluto).</p>
+<div class="table-responsive">
+<table>
+<thead>
+    <tr><th>Fermata</th><th>Provenienza</th><th>Rilevazioni</th><th>Scostamento<br>medio</th><th>Scostamento<br>massimo</th><th>Scostamento<br>minimo</th></tr>
+</thead><tbody>
+<tr><td>Torino PN</td><td>Tutte</td><td>28</td><td>-00.01.21</td><td>-00.02.00</td><td>-00.01.00</td></tr>
+<tr><td>Torino PS</td><td>Tutte</td><td>15</td><td>-00.00.32</td><td>-00.01.00</td><td>00.00.30</td></tr>
+<tr><td>Torino Ling.</td><td>Torino PN</td><td>2</td><td>-00.00.30</td><td>-00.00.30</td><td>-00.00.30</td></tr>
+<tr><td>Torino Ling.</td><td>Asti/Alessandria</td><td>3</td><td>-00.00.30</td><td>-00.00.30</td><td>-00.00.30</td></tr>
+<tr><td>Asti</td><td>Torino</td><td>5</td><td>-00.00.54</td><td>-00.01.00</td><td>-00.00.30</td></tr>
+<tr><td>Asti</td><td>Alessandria/Genova</td><td>4</td><td>-00.00.37</td><td>-00.01.00</td><td>-00.00.30</td></tr>
+<tr><td>Asti</td><td>Acqui Terme</td><td>1</td><td>-00.02.00</td><td>-00.02.00</td><td>-00.02.00</td></tr>
+<tr><td>Villanova</td><td>Torino</td><td>17</td><td>-00.00.55</td><td>-00.01.30</td><td>00.00.00</td></tr>
+<tr><td>Villanova</td><td>Asti</td><td>8</td><td>-00.00.19</td><td>00.00.30</td><td>-00.00.30</td></tr>
+<tr><td>Villafranca</td><td>Torino</td><td>5</td><td>-00.00.36</td><td>-00.01.00</td><td>-00.00.30</td></tr>
+<tr><td>Villafranca</td><td>Asti</td><td>3</td><td>-00.01.10</td><td>-00.01.30</td><td>-00.01.00</td></tr>
+<tr><td>Baldichieri</td><td>Torino</td><td>5</td><td>00.01.36</td><td>00.02.30</td><td>00.01.00</td></tr>
+<tr><td>Baldichieri</td><td>Asti</td><td>2</td><td>00.00.00</td><td>00.00.00</td><td>00.00.00</td></tr>
+<tr><td>S. Damiano</td><td>Torino</td><td>1</td><td>-00.01.00</td><td>-00.01.00</td><td>-00.01.00</td></tr>
+<tr><td>S. Damiano</td><td>Asti</td><td>1</td><td>-00.00.30</td><td>-00.00.30</td><td>-00.00.30</td></tr>
+<tr><td>S. Paolo Solbrito</td><td>Torino</td><td>1</td><td>-00.01.00</td><td>-00.01.00</td><td>-00.01.00</td></tr>
+<tr><td>S. Paolo Solbrito</td><td>Asti</td><td>1</td><td>-00.00.30</td><td>-00.00.30</td><td>-00.00.30</td></tr>
+</tbody></table></div>
+
+<p>Come si può notare, gli arrivi a Torino Porta Nuova sono dichiarati in media con un anticipo di quasi un minuto e mezzo rispetto all'arrivo effettivo, con punte di due minuti. In cinque occasioni su ventotto rilevazioni (evidenziate nella tabella di dettaglio riportata in calce), questo scostamento ha fatto scendere il ritardo dichiarato sotto i cinque minuti, la soglia oltre la quale il ritardo viene conteggiato ai fini delle penali. Più contenuti gli scostamenti nelle altre stazioni.</p>
+<p>Chiaramente non vi sono elementi per affermare che questi scostamenti derivino da una manipolazione deliberata. È verosimile che vi siano motivazioni tecniche che impediscono il posizionamento dei sensori di rilevazione in esatta corrispondenza della fermata dei treni, anche se scostamenti di due minuti paiono eccessivi (considerando la velocità media in ingresso a Porta Nuova rilevata in queste <a href="http://monitor-treni.fabriziotarizzo.org/gps.html">tracce GPS</a>, due minuti corrispondono ad alcune centinaia di metri). Sarebbe però opportuno che tali motivazioni tecniche siano dichiarate e che ne venga tenuto conto nei calcoli ai fini della rendicontazione al regolatore pubblico del servizio. Purtroppo, come evidenziato anche nel comunicato Trenitalia, i dati sui quali si calcolano le rendicontazioni ufficiali (sistema PIC) non sono disponibili pubblicamente come Open data, quindi verifiche indipendenti non sono possibili (la trasparenza nella gestione dei servizi pubblici è notoriamente qualcosa di cui tutti amano parlare ma che quasi nessuno ama mettere in pratica).</p>
+
+</section>
+
+<section>
+<header><h2>Dettaglio delle rilevazioni</h2></header>
+<p>Le tabelle seguenti riportano in dettaglio tutte le rilevazioni effettuate.</p>
+<section>
+<header><h3>Torino P.N.</h3></header>
+<div class="table-responsive">
+<table><thead>
+<tr><th>Data</th><th>Treno</th><th>Provenienza</th><th>Arrivo atteso</th><th>Arrivo effettivo</th><th>Arrivo secondo Viaggiatreno</th><th>Scostamento</th><th>Ritardo effettivo</th><th>Ritardo secondo Viaggiatreno</th></tr>
+</thead><tbody>
+ <tr><td>06/03/2015</td><td>2544</td><td>Novi Ligure</td><td>07.45.00</td><td>07.48.00</td><td>07.47.00</td><td>-00.01.00</td><td>3</td><td>2</td></tr>
+ <tr style="background:yellow"><td>16/03/2015</td><td>2544</td><td>Novi Ligure</td><td>07.45.00</td><td>07.50.30</td><td>07.49.00</td><td>-00.01.30</td><td>6</td><td>4</td></tr>
+ <tr style="background:yellow"><td>18/03/2015</td><td>2544</td><td>Novi Ligure</td><td>07.45.00</td><td>07.50.00</td><td>07.48.00</td><td>-00.02.00</td><td>5</td><td>3</td></tr>
+ <tr><td>19/03/2015</td><td>2544</td><td>Novi Ligure</td><td>07.45.00</td><td>07.47.30</td><td>07.46.30</td><td>-00.01.00</td><td>3</td><td>2</td></tr>
+ <tr><td>20/03/2015</td><td>2544</td><td>Novi Ligure</td><td>07.45.00</td><td>07.45.30</td><td>07.44.30</td><td>-00.01.00</td><td>1</td><td>-1</td></tr>
+ <tr><td>23/03/2015</td><td>2544</td><td>Novi Ligure</td><td>07.45.00</td><td>08.00.30</td><td>07.59.30</td><td>-00.01.00</td><td>16</td><td>15</td></tr>
+ <tr><td>23/03/2015</td><td>10204</td><td>Cuneo</td><td>08.05.00</td><td>08.07.30</td><td>08.06.00</td><td>-00.01.30</td><td>3</td><td>1</td></tr>
+ <tr><td>23/03/2015</td><td>10130</td><td>Savona</td><td>13.35.00</td><td>13.38.00</td><td>13.37.00</td><td>-00.01.00</td><td>3</td><td>2</td></tr>
+ <tr style="background:yellow"><td>23/03/2015</td><td>2520</td><td>Alessandria</td><td>17.30.00</td><td>17.34.30</td><td>17.32.30</td><td>-00.02.00</td><td>5</td><td>3</td></tr>
+ <tr><td>24/03/2015</td><td>2544</td><td>Novi Ligure</td><td>07.45.00</td><td>07.48.00</td><td>07.46.00</td><td>-00.02.00</td><td>3</td><td>1</td></tr>
+ <tr><td>24/03/2015</td><td>4434</td><td>Bra</td><td>07.50.00</td><td>07.52.00</td><td>07.51.00</td><td>-00.01.00</td><td>2</td><td>1</td></tr>
+ <tr><td>24/03/2015</td><td>2520</td><td>Alessandria</td><td>17.30.00</td><td>17.29.30</td><td>17.28.00</td><td>-00.01.30</td><td>-1</td><td>-2</td></tr>
+ <tr><td>25/03/2015</td><td>2544</td><td>Novi Ligure</td><td>07.45.00</td><td>07.47.30</td><td>07.46.30</td><td>-00.01.00</td><td>3</td><td>2</td></tr>
+ <tr style="background:yellow"><td>25/03/2015</td><td>4434</td><td>Bra</td><td>07.50.00</td><td>07.55.00</td><td>07.54.00</td><td>-00.01.00</td><td>5</td><td>4</td></tr>
+ <tr><td>26/03/2015</td><td>2544</td><td>Novi Ligure</td><td>07.45.00</td><td>07.46.30</td><td>07.45.00</td><td>-00.01.30</td><td>2</td><td>0</td></tr>
+ <tr><td>26/03/2015</td><td>2512</td><td>Alessandria</td><td>13.30.00</td><td>13.41.00</td><td>13.40.00</td><td>-00.01.00</td><td>11</td><td>10</td></tr>
+ <tr><td>26/03/2015</td><td>10315</td><td>Bardonecchia</td><td>13.45.00</td><td>13.48.30</td><td>13.47.30</td><td>-00.01.00</td><td>4</td><td>3</td></tr>
+ <tr><td>26/03/2015</td><td>2520</td><td>Alessandria</td><td>17.30.00</td><td>17.29.00</td><td>17.28.00</td><td>-00.01.00</td><td>-1</td><td>-2</td></tr>
+ <tr><td>26/03/2015</td><td>11116</td><td>Ivrea</td><td>17.32.00</td><td>17.35.00</td><td>17.33.00</td><td>-00.02.00</td><td>3</td><td>1</td></tr>
+ <tr><td>27/03/2015</td><td>2544</td><td>Novi Ligure</td><td>07.45.00</td><td>07.54.30</td><td>07.53.00</td><td>-00.01.30</td><td>10</td><td>8</td></tr>
+ <tr><td>27/03/2015</td><td>4309</td><td>Bussoleno</td><td>08.00.00</td><td>08.02.30</td><td>08.00.30</td><td>-00.02.00</td><td>3</td><td>1</td></tr>
+ <tr><td>27/03/2015</td><td>10204</td><td>Cuneo</td><td>08.05.00</td><td>08.04.00</td><td>08.03.00</td><td>-00.01.00</td><td>-1</td><td>-2</td></tr>
+ <tr><td>27/03/2015</td><td>2018</td><td>Milano</td><td>17.10.00</td><td>17.11.00</td><td>17.09.30</td><td>-00.01.30</td><td>1</td><td>-1</td></tr>
+ <tr><td>27/03/2015</td><td>4329</td><td>Susa</td><td>17.15.00</td><td>17.24.00</td><td>17.22.30</td><td>-00.01.30</td><td>9</td><td>8</td></tr>
+ <tr style="background:yellow"><td>27/03/2015</td><td>2520</td><td>Alessandria</td><td>17.30.00</td><td>17.35.00</td><td>17.34.00</td><td>-00.01.00</td><td>5</td><td>4</td></tr>
+ <tr><td>27/03/2015</td><td>11116</td><td>Ivrea</td><td>17.32.00</td><td>17.34.00</td><td>17.32.00</td><td>-00.02.00</td><td>2</td><td>0</td></tr>
+ <tr><td>31/03/2015</td><td>2544</td><td>Novi Ligure</td><td>07.45.00</td><td>07.59.30</td><td>07.58.30</td><td>-00.01.00</td><td>15</td><td>14</td></tr>
+ <tr><td>02/04/2015</td><td>2544</td><td>Novi Ligure</td><td>07.45.00</td><td>07.48.30</td><td>07.47.00</td><td>-00.01.30</td><td>4</td><td>2</td></tr>
+</tbody></table></div></section>
+
+<section>
+<header><h3>Torino P.S.</h3></header>
+<div class="table-responsive"><table><thead>
+<tr><th>Data</th><th>Treno</th><th>Provenienza</th><th>Arrivo atteso</th><th>Arrivo effettivo</th><th>Arrivo secondo Viaggiatreno</th><th>Scostamento</th><th>Ritardo effettivo</th><th>Ritardo secondo Viaggiatreno</th></tr>
+</thead><tbody>
+ <tr><td>14/04/2014</td><td>4102</td><td>Chieri</td><td>07.49.00</td><td>07.48.00</td><td>07.47.00</td><td>-00.01.00</td><td>-1</td><td>-2</td></tr>
+ <tr><td>14/04/2014</td><td>4704</td><td>Fossano</td><td>07.59.00</td><td>07.58.00</td><td>07.57.30</td><td>-00.00.30</td><td>-1</td><td>-2</td></tr>
+ <tr><td>15/04/2015</td><td>4102</td><td>Chieri</td><td>07.49.00</td><td>07.47.00</td><td>07.46.00</td><td>-00.01.00</td><td>-2</td><td>-3</td></tr>
+ <tr><td>15/04/2015</td><td>4704</td><td>Fossano</td><td>07.59.00</td><td>07.58.30</td><td>07.58.00</td><td>-00.00.30</td><td>-2</td><td>-1</td></tr>
+ <tr><td>16/04/2015</td><td>4102</td><td>Chieri</td><td>07.49.00</td><td>07.50.30</td><td>07.51.00</td><td>00.00.30</td><td>2</td><td>2</td></tr>
+ <tr><td>16/04/2015</td><td>4704</td><td>Fossano</td><td>07.59.00</td><td>07.58.00</td><td>07.57.30</td><td>-00.00.30</td><td>-1</td><td>-2</td></tr>
+ <tr><td>16/04/2015</td><td>4208</td><td>Pinerolo</td><td>08.04.00</td><td>08.06.00</td><td>08.05.00</td><td>-00.01.00</td><td>2</td><td>1</td></tr>
+ <tr><td>16/04/2015</td><td>4602</td><td>Asti</td><td>08.12.00</td><td>08.11.00</td><td>08.10.30</td><td>-00.00.30</td><td>-1</td><td>-2</td></tr>
+ <tr><td>17/04/2015</td><td>4102</td><td>Chieri</td><td>07.49.00</td><td>07.49.00</td><td>07.48.30</td><td>-00.00.30</td><td>0</td><td>-1</td></tr>
+ <tr><td>17/04/2015</td><td>4704</td><td>Fossano</td><td>07.59.00</td><td>08.00.00</td><td>07.59.30</td><td>-00.00.30</td><td>1</td><td>1</td></tr>
+ <tr><td>17/04/2015</td><td>4208</td><td>Pinerolo</td><td>08.04.00</td><td>08.10.00</td><td>08.09.30</td><td>-00.00.30</td><td>6</td><td>6</td></tr>
+ <tr><td>17/04/2015</td><td>4602</td><td>Asti</td><td>08.12.00</td><td>08.15.30</td><td>08.15.00</td><td>-00.00.30</td><td>4</td><td>3</td></tr>
+ <tr><td>20/04/2015</td><td>4102</td><td>Chieri</td><td>07.49.00</td><td>07.49.30</td><td>07.49.00</td><td>-00.00.30</td><td>1</td><td>0</td></tr>
+ <tr><td>20/04/2015</td><td>4704</td><td>Fossano</td><td>07.59.00</td><td>07.59.00</td><td>07.58.30</td><td>-00.00.30</td><td>0</td><td>-1</td></tr>
+ <tr><td>20/04/2015</td><td>4602</td><td>Asti</td><td>08.12.00</td><td>08.10.00</td><td>08.09.30</td><td>-00.00.30</td><td>-2</td><td>-3</td></tr>
+</tbody></table></div></section>
+
+
+<section>
+<header><h3>Torino Lingotto</h3></header>
+<div class="table-responsive"><table><thead>
+<tr><th>Data</th><th>Treno</th><th>Provenienza</th><th>Arrivo atteso</th><th>Arrivo effettivo</th><th>Arrivo secondo Viaggiatreno</th><th>Scostamento</th><th>Ritardo effettivo</th><th>Ritardo secondo Viaggiatreno</th></tr>
+</thead><tbody>
+ <tr><td>16/03/2015</td><td>2543</td><td>Torino</td><td>17.51.00</td><td>17.52.00</td><td>17.51.30</td><td>-00.00.30</td><td>4</td><td>1</td></tr>
+ <tr><td>18/03/2015</td><td>2543</td><td>Torino</td><td>17.51.00</td><td>17.50.30</td><td>17.50.00</td><td>-00.00.30</td><td>-1</td><td>-1</td></tr>
+ <tr><td>25/03/2015</td><td>2544</td><td>Novi Ligure</td><td>07.37.00</td><td>07.39.30</td><td>07.39.00</td><td>-00.00.30</td><td>3</td><td>2</td></tr>
+ <tr><td>27/03/2015</td><td>2544</td><td>Novi Ligure</td><td>07.37.00</td><td>07.46.00</td><td>07.45.30</td><td>-00.00.30</td><td>9</td><td>9</td></tr>
+ <tr><td>15/04/2015</td><td>2544</td><td>Novi Ligure</td><td>07.37.00</td><td>07.40.00</td><td>07.39.30</td><td>-00.00.30</td><td>3</td><td>3</td></tr>
+</tbody></table></div></section>
+
+<section>
+<header><h3>Asti</h3></header>
+<div class="table-responsive"><table><thead>
+<tr><th>Data</th><th>Treno</th><th>Provenienza</th><th>Arrivo atteso</th><th>Arrivo effettivo</th><th>Arrivo secondo Viaggiatreno</th><th>Scostamento</th><th>Ritardo effettivo</th><th>Ritardo secondo Viaggiatreno</th></tr>
+</thead><tbody>
+ <tr><td>28/03/2015</td><td>2506</td><td>Genova</td><td>09.52.00</td><td>09.53.00</td><td>09.52.30</td><td>-00.00.30</td><td>1</td><td>1</td></tr>
+ <tr><td>28/03/2015</td><td>4644</td><td>Torino</td><td>09.55.00</td><td>09.57.30</td><td>09.56.30</td><td>-00.01.00</td><td>3</td><td>2</td></tr>
+ <tr><td>28/03/2015</td><td>20088</td><td>Alessandria</td><td>10.48.00</td><td>10.52.30</td><td>10.52.00</td><td>-00.00.30</td><td>5</td><td>4</td></tr>
+ <tr><td>28/03/2015</td><td>2508</td><td>Genova</td><td>10.52.00</td><td>10.53.30</td><td>10.52.30</td><td>-00.01.00</td><td>2</td><td>1</td></tr>
+ <tr><td>28/03/2015</td><td>4646</td><td>Torino</td><td>10.55.00</td><td>10.52.00</td><td>10.51.00</td><td>-00.01.00</td><td>-3</td><td>-4</td></tr>
+ <tr><td>28/03/2015</td><td>2511</td><td>Torino</td><td>11.05.00</td><td>11.18.00</td><td>11.17.00</td><td>-00.01.00</td><td>13</td><td>12</td></tr>
+ <tr><td>28/03/2015</td><td>IC 511</td><td>Torino</td><td>11.26.00</td><td>11.30.30</td><td>11.29.30</td><td>-00.01.00</td><td>5</td><td>4</td></tr>
+ <tr><td>28/03/2015</td><td>10082</td><td>Acqui Terme</td><td>11.44.00</td><td>11.52.00</td><td>11.50.00</td><td>-00.02.00</td><td>8</td><td>6</td></tr>
+ <tr><td>28/03/2015</td><td>2510</td><td>Genova</td><td>11.52.00</td><td>11.52.30</td><td>11.52.00</td><td>-00.00.30</td><td>1</td><td>0</td></tr>
+ <tr><td>28/03/2015</td><td>4648</td><td>Torino</td><td>11.55.00</td><td>11.52.00</td><td>11.51.30</td><td>-00.00.30</td><td>-3</td><td>-4</td></tr>
+</tbody></table></div></section>
+
+<section>
+<header><h3>Villanova</h3></header>
+<div class="table-responsive"><table><thead>
+<tr><th>Data</th><th>Treno</th><th>Provenienza</th><th>Arrivo atteso</th><th>Arrivo effettivo</th><th>Arrivo secondo Viaggiatreno</th><th>Scostamento</th><th>Ritardo effettivo</th><th>Ritardo secondo Viaggiatreno</th></tr>
+</thead><tbody>
+ <tr><td>16/03/2015</td><td>4640</td><td>Torino</td><td>07.10.00</td><td>07.15.00</td><td>07.14.00</td><td>-00.01.00</td><td>5</td><td>4</td></tr>
+ <tr><td>16/03/2015</td><td>2544</td><td>Novi Ligure</td><td>07.19.00</td><td>07.19.00</td><td>07.19.00</td><td>00.00.00</td><td>0</td><td>0</td></tr>
+ <tr><td>16/03/2015</td><td>2543</td><td>Torino</td><td>18.09.00</td><td>18.07.30</td><td>18.06.30</td><td>-00.01.00</td><td>-2</td><td>-3</td></tr>
+ <tr><td>18/03/2015</td><td>4640</td><td>Torino</td><td>07.10.00</td><td>07.10.00</td><td>07.09.00</td><td>-00.01.00</td><td>0</td><td>1</td></tr>
+ <tr><td>18/03/2015</td><td>2544</td><td>Novi Ligure</td><td>07.19.00</td><td>07.27.30</td><td>07.27.00</td><td>-00.00.30</td><td>9</td><td>8</td></tr>
+ <tr><td>18/03/2015</td><td>2543</td><td>Torino</td><td>18.09.00</td><td>18.04.00</td><td>18.03.00</td><td>-00.01.00</td><td>-5</td><td>-6</td></tr>
+ <tr><td>19/03/2015</td><td>4640</td><td>Torino</td><td>07.10.00</td><td>07.12.00</td><td>07.11.00</td><td>-00.01.00</td><td>2</td><td>1</td></tr>
+ <tr><td>19/03/2015</td><td>2544</td><td>Novi Ligure</td><td>07.19.00</td><td>07.23.30</td><td>07.23.00</td><td>-00.00.30</td><td>5</td><td>4</td></tr>
+ <tr><td>19/03/2015</td><td>2543</td><td>Torino</td><td>18.09.00</td><td>18.06.30</td><td>18.05.00</td><td>-00.01.30</td><td>-3</td><td>-4</td></tr>
+ <tr><td>20/03/2015</td><td>4640</td><td>Torino</td><td>07.10.00</td><td>07.14.00</td><td>07.14.00</td><td>00.00.00</td><td>4</td><td>4</td></tr>
+ <tr><td>20/03/2015</td><td>2544</td><td>Novi Ligure</td><td>07.19.00</td><td>07.21.30</td><td>07.22.00</td><td>00.00.30</td><td>3</td><td>3</td></tr>
+ <tr><td>20/03/2015</td><td>2543</td><td>Torino</td><td>18.09.00</td><td>18.08.30</td><td>18.07.30</td><td>-00.01.00</td><td>-1</td><td>-2</td></tr>
+ <tr><td>23/03/2015</td><td>4640</td><td>Torino</td><td>07.10.00</td><td>07.10.30</td><td>07.09.30</td><td>-00.01.00</td><td>1</td><td>-1</td></tr>
+ <tr><td>23/03/2015</td><td>2544</td><td>Novi Ligure</td><td>07.19.00</td><td>07.24.00</td><td>07.23.30</td><td>-00.00.30</td><td>5</td><td>5</td></tr>
+ <tr><td>23/03/2015</td><td>2543</td><td>Torino</td><td>18.09.00</td><td>18.05.30</td><td>18.04.30</td><td>-00.01.00</td><td>-4</td><td>-5</td></tr>
+ <tr><td>24/03/2015</td><td>4640</td><td>Torino</td><td>07.10.00</td><td>07.10.30</td><td>07.09.30</td><td>-00.01.00</td><td>1</td><td>-1</td></tr>
+ <tr><td>24/03/2015</td><td>2544</td><td>Novi Ligure</td><td>07.19.00</td><td>07.25.30</td><td>07.25.00</td><td>-00.00.30</td><td>7</td><td>6</td></tr>
+ <tr><td>24/03/2015</td><td>2543</td><td>Torino</td><td>18.09.00</td><td>18.09.00</td><td>18.08.00</td><td>-00.01.00</td><td>0</td><td>-1</td></tr>
+ <tr><td>25/03/2015</td><td>4640</td><td>Torino</td><td>07.10.00</td><td>07.13.00</td><td>07.13.00</td><td>00.00.00</td><td>3</td><td>3</td></tr>
+ <tr><td>25/03/2015</td><td>2544</td><td>Novi Ligure</td><td>07.19.00</td><td>07.22.00</td><td>07.21.30</td><td>-00.00.30</td><td>3</td><td>3</td></tr>
+ <tr><td>25/03/2015</td><td>2543</td><td>Torino</td><td>18.09.00</td><td>18.06.30</td><td>18.05.30</td><td>-00.01.00</td><td>-3</td><td>-4</td></tr>
+ <tr><td>27/03/2015</td><td>4640</td><td>Torino</td><td>07.10.00</td><td>07.17.30</td><td>07.16.30</td><td>-00.01.00</td><td>8</td><td>7</td></tr>
+ <tr><td>27/03/2015</td><td>2544</td><td>Novi Ligure</td><td>07.19.00</td><td>07.32.30</td><td>07.32.00</td><td>-00.00.30</td><td>14</td><td>13</td></tr>
+ <tr><td>27/03/2015</td><td>2543</td><td>Torino</td><td>18.09.00</td><td>18.05.00</td><td>18.04.00</td><td>-00.01.00</td><td>-4</td><td>-5</td></tr>
+ <tr><td>02/04/2015</td><td>4640</td><td>Torino</td><td>07.10.00</td><td>07.11.30</td><td>07.10.30</td><td>-00.01.00</td><td>2</td><td>1</td></tr>
+</tbody></table></div></section>
+
+<section>
+<header><h3>Villafranca</h3></header>
+<div class="table-responsive"><table><thead>
+<tr><th>Data</th><th>Treno</th><th>Provenienza</th><th>Arrivo atteso</th><th>Arrivo effettivo</th><th>Arrivo secondo Viaggiatreno</th><th>Scostamento</th><th>Ritardo effettivo</th><th>Ritardo secondo Viaggiatreno</th></tr>
+</thead><tbody>
+ <tr><td>12/03/2015</td><td>2543</td><td>Torino</td><td>18.16.00</td><td>18.17.00</td><td>18.16.30</td><td>-00.00.30</td><td>1</td><td>1</td></tr>
+ <tr><td>12/03/2015</td><td>4624</td><td>Asti</td><td>18.21.00</td><td>18.23.00</td><td>18.22.00</td><td>-00.01.00</td><td>2</td><td>1</td></tr>
+ <tr><td>12/03/2015</td><td>4662</td><td>Torino</td><td>18.32.00</td><td>18.37.30</td><td>18.37.00</td><td>-00.00.30</td><td>6</td><td>5</td></tr>
+ <tr><td>03/04/2015</td><td>4622</td><td>Asti</td><td>17.21.00</td><td>17.22.00</td><td>17.20.30</td><td>-00.01.30</td><td>1</td><td>-1</td></tr>
+ <tr><td>03/04/2015</td><td>4660</td><td>Torino</td><td>17.32.00</td><td>17.31.30</td><td>17.31.00</td><td>-00.00.30</td><td>-1</td><td>-1</td></tr>
+ <tr><td>03/04/2015</td><td>2543</td><td>Torino</td><td>18.16.00</td><td>18.30.30</td><td>18.30.00</td><td>-00.00.30</td><td>15</td><td>14</td></tr>
+ <tr><td>03/04/2015</td><td>4624</td><td>Asti</td><td>18.21.00</td><td>18.20.30</td><td>18.19.30</td><td>-00.01.00</td><td>-1</td><td>-2</td></tr>
+ <tr><td>03/04/2015</td><td>4662</td><td>Torino</td><td>18.32.00</td><td>18.38.00</td><td>18.37.00</td><td>-00.01.00</td><td>6</td><td>5</td></tr>
+</tbody></table></div></section>
+
+<section>
+<header><h3>Baldichieri</h3></header>
+<div class="table-responsive"><table><thead>
+<tr><th>Data</th><th>Treno</th><th>Provenienza</th><th>Arrivo atteso</th><th>Arrivo effettivo</th><th>Arrivo secondo Viaggiatreno</th><th>Scostamento</th><th>Ritardo effettivo</th><th>Ritardo secondo Viaggiatreno</th></tr>
+</thead><tbody>
+ <tr><td>07/03/2015</td><td>4660</td><td>Torino</td><td>17.37.00</td><td>17.36.00</td><td>17.37.30</td><td>00.01.30</td><td>-1</td><td>1</td></tr>
+ <tr><td>13/03/2015</td><td>4660</td><td>Torino</td><td>17.37.00</td><td>17.36.00</td><td>17.38.30</td><td>00.02.30</td><td>-1</td><td>2</td></tr>
+ <tr><td>21/03/2015</td><td>2547</td><td>Torino</td><td>23.08.00</td><td>23.10.30</td><td>23.11.30</td><td>00.01.00</td><td>3</td><td>4</td></tr>
+ <tr><td>28/03/2015</td><td>4618</td><td>Asti</td><td>15.16.00</td><td>15.16.00</td><td>15.16.00</td><td>00.00.00</td><td>0</td><td>0</td></tr>
+ <tr><td>28/03/2015</td><td>2547</td><td>Torino</td><td>23.08.00</td><td>23.08.30</td><td>23.09.30</td><td>00.01.00</td><td>1</td><td>2</td></tr>
+ <tr><td>03/04/2015</td><td>4620</td><td>Asti</td><td>16.16.00</td><td>16.16.00</td><td>16.16.00</td><td>00.00.00</td><td>0</td><td>0</td></tr>
+ <tr><td>03/04/2015</td><td>4658</td><td>Torino</td><td>16.37.00</td><td>16.40.30</td><td>16.42.30</td><td>00.02.00</td><td>4</td><td>6</td></tr>
+</tbody></table></div></section>
+
+<section>
+<header><h3>San Damiano</h3></header>
+<div class="table-responsive"><table><thead>
+<tr><th>Data</th><th>Treno</th><th>Provenienza</th><th>Arrivo atteso</th><th>Arrivo effettivo</th><th>Arrivo secondo Viaggiatreno</th><th>Scostamento</th><th>Ritardo effettivo</th><th>Ritardo secondo Viaggiatreno</th></tr>
+</thead><tbody>
+ <tr><td>21/03/2015</td><td>4618</td><td>Asti</td><td>15.11.00</td><td>15.12.00</td><td>15.11.30</td><td>-00.00.30</td><td>1</td><td>1</td></tr>
+ <tr><td>21/03/2015</td><td>4656</td><td>Torino</td><td>15.41.00</td><td>15.41.00</td><td>15.40.00</td><td>-00.01.00</td><td>0</td><td>-1</td></tr>
+</tbody></table></div></section>
+
+<section>
+<header><h3>S. Paolo Solbrito</h3></header>
+<div class="table-responsive"><table><thead>
+<tr><th>Data</th><th>Treno</th><th>Provenienza</th><th>Arrivo atteso</th><th>Arrivo effettivo</th><th>Arrivo secondo Viaggiatreno</th><th>Scostamento</th><th>Ritardo effettivo</th><th>Ritardo secondo Viaggiatreno</th></tr>
+</thead><tbody>
+<tr><td>20/03/2015</td><td>4662</td><td>Torino</td><td>18.26.00</td><td>18.32.30</td><td>18.31.30</td><td>-00.01.00</td><td>7</td><td>6</td></tr>
+<tr><td>20/03/2015</td><td>4624</td><td>Asti</td><td>18.27.00</td><td>18.28.00</td><td>18.27.30</td><td>-00.00.30</td><td>1</td><td>1</td></tr>
+</tbody></table></div></section>
+</section>
+
