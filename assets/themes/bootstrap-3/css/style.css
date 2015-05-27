@@ -64,3 +64,5 @@ aside ul {list-style-type:none;padding-left:1em}
 aside ul li {padding:0.15em 0}
 q {font-style:italic}
 img.flex {max-width:100%}
+
+dd {padding-left:1em}
