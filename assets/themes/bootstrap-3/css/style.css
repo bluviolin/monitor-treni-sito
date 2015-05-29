@@ -66,3 +66,6 @@ q {font-style:italic}
 img.flex {max-width:100%}
 
 dd {padding-left:1em}
+
+/* EU Cookie popup - from https://plugins.trac.wordpress.org/browser/easy-wp-cookie-popup/ */
+#eu-cookie{background:rgba(0,0,0,0.8);display:none;color:#fff;position:fixed;z-index:3000;-webkit-transform:translateZ(0);width:100%;font-size:small}#eu-cookie.top{top:0}#eu-cookie.bottom{bottom:0}#eu-cookie .popup-wrapper{padding:10px}#eu-cookie .popup-wrapper p{border:none;color:#fff;margin:0;font-weight:400}#eu-cookie .popup-wrapper a{color:#4279a6}#eu-cookie .popup-wrapper a:hover{color:#b2d9ff}#eu-cookie .popup-wrapper a.close-icon{float:right}#eu-cookie .popup-wrapper a.close-icon .fa{color:#fff}#eu-cookie .popup-wrapper a.close-icon .fa:hover{color:#b2d9ff}/*#eu-cookie .popup-wrapper a.close-icon span{height:0;visibility:none}*/

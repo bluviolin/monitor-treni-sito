@@ -65,4 +65,21 @@ $(document).ready(function(){
 	}); // $(document).tooltip
 }); // $(document).ready
 
+
+/* EU Cookie popup - from https://plugins.trac.wordpress.org/browser/easy-wp-cookie-popup/ */
+(function($){	
+
+if( $.cookie("accepted-cookies") != 'true' ) {
+	$('#eu-cookie').show("fast");
+}
+
+/* Allow user to close cookie popup */
+$('a.close-icon').click(function() {
+	$('#eu-cookie').hide("fast");
+	$.cookie('accepted-cookies', 'true', { expires: 15, path: '/' }); //cookie to be valid for entire site
+	return false;
+});
+
+})(jQuery); // EU Cookie popup
+
 google.load("visualization", "1", {packages: ["corechart"]});

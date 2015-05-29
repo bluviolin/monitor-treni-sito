@@ -105,6 +105,12 @@
   </head>
   <body>
     <div id="wrap">
+      <div id="eu-cookie" class="top">
+         <div class="popup-wrapper">
+  	 <p>Questo sito utilizza i cookies. Utilizzando questo sito l'utente dichiara di accettare e acconsentire all'utilizzo dei cookies in conformità con i termini espressi in <a href="/privacy-policy.html">questo documento</a>. <a href="javascript:void(0);" class="close-icon"><i class="fa fa-times"></i><span>Chiudi questo popup</span></a></p>
+  	 </div>
+       </div> <!-- eu-cookie -->
+
      <header>
       <nav class="navbar navbar-default" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -175,6 +181,7 @@
     <!-- Latest compiled and minified JavaScript, requires jQuery 1.x (2.x not supported in IE8) -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script type="text/javascript" src="{{ site.external_resources_url }}/js/jquery-1.11.2+bootstrap+jquery-ui-1.11.2.min.js"></script>
+    <script type="text/javascript" src="{{ site.external_resources_url }}/js/jquery.cookie.min.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 {% if page.scripts %}
   {% for js in page.scripts %}
