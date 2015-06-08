@@ -140,32 +140,19 @@
         {{ content }}
 
       <div id="social-buttons">
+          Condividi: 
           <div> <!-- Facebook -->
-              <div id="fb-root"></div>
-              <script>(function(d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) return;
-                js = d.createElement(s); js.id = id;
-                js.src = "//connect.facebook.net/it_IT/sdk.js#xfbml=1&version=v2.0";
-                fjs.parentNode.insertBefore(js, fjs);
-              }(document, 'script', 'facebook-jssdk'));</script>
-              <div class="fb-like" data-href="{{ canonical }}" data-layout="button_count" data-action="recommend" data-show-faces="false" data-share="true"></div>
+              <a href="https://www.facebook.com/sharer/sharer.php?u={{ canonical | uri_escape }}" target="_blank"><img src="{{ ASSET_PATH }}/images/share/facebook.png" alt="Condividi con Facebook" title="Condividi con Facebook"></a>
           </div> <!-- /Facebook -->
           <div> <!-- Twitter -->
-              <a href="https://twitter.com/share" class="twitter-share-button" data-text="{{ title | replace:'pendolari','#pendolari' }}" data-url="{{ canonical }}" data-via="{{ site.social.twitter.username }}" data-lang="it" data-hashtags="{{ site.social.twitter.hashtags }}">Tweet</a>
-              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+              <a href="https://twitter.com/intent/tweet?text={{ title | replace:'pendolari','#pendolari' | cgi_escape }}&amp;url={{ canonical | uri_escape }}&amp;via={{ site.social.twitter.username }}" target="_blank"><img src="{{ ASSET_PATH }}/images/share/twitter.png" alt="Condividi con Twitter" title="Condividi con Twitter"></a>
           </div> <!-- /Twitter -->
           <div> <!-- Google+ -->
-              <script >window.___gcfg = {lang: 'it'};</script>
-              <script src="https://apis.google.com/js/platform.js" async defer></script>
-              <div class="g-plusone" data-size="medium" data-href="{{ canonical }}"></div>
-              <div class="g-plus" data-action="share" data-annotation="bubble" data-href="{{ canonical }}"></div>
+              <a href="https://plus.google.com/share?url={{ canonical | uri_escape }}" target="_blank"><img src="{{ ASSET_PATH }}/images/share/googleplus.png" alt="Condividi con Google+" title="Condividi con Google+"></a>
           </div> <!-- /Google+ -->
-          <div> <!-- Buffer -->
-              <a href="http://bufferapp.com/add" class="buffer-add-button" data-url="{{ canonical }}" data-count="none" data-via="{{ site.social.twitter.username }}"></a><script type="text/javascript" src="https://d389zggrogs7qo.cloudfront.net/js/button.js"></script>
-          </div> <!-- /Buffer -->
+
           <div> <!-- Flattr -->
-              <a href="https://flattr.com/submit/auto?user_id=bluviolin&amp;url={{ site.production_url | cgi_escape }}" target="_blank"><img src="//api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this"></a>
+              <a href="https://flattr.com/submit/auto?user_id=bluviolin&amp;url={{ site.production_url | cgi_escape }}" target="_blank"><img src="{{ ASSET_PATH }}/images/share/flattr.png" alt="Dona con Flattr" title="Dona con Flattr"></a>
           </div> <!-- /Flattr -->
       </div> <!-- /div#social-buttons -->
       
