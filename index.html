@@ -13,7 +13,7 @@ is_homepage: true
 <div class="col-md-6">
 <section id="posts"><header><h2>Report mensili</h2></header>
 <ul>{% for post in site.posts %}
-    <li><a href="{{ site.production_url }}{{ post.url }}">{{ post.title }}</a></li>
+    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}</ul>
 </section>
 </div> <!-- .col-md-4 --> 
