@@ -23,7 +23,7 @@
     <!-- Sticky Footer -->
     <link href="{{ ASSET_PATH }}/bootstrap/css/bs-sticky-footer.css" rel="stylesheet">
     <!-- jqueryUI -->
-    <link rel="stylesheet" href="{{ site.external_resources_url }}/js/jquery-ui-1.11.2/jquery-ui.min.css" />
+    <link rel="stylesheet" href="{{ ASSET_PATH }}/bootstrap/css/jquery-ui.min.css" />
     <!-- Custom styles -->
     <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
 
@@ -167,8 +167,8 @@
 
     <!-- Latest compiled and minified JavaScript, requires jQuery 1.x (2.x not supported in IE8) -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script type="text/javascript" src="{{ site.external_resources_url }}/js/jquery-1.11.2+bootstrap+jquery-ui-1.11.2.min.js"></script>
-    <script type="text/javascript" src="{{ site.external_resources_url }}/js/jquery.cookie.min.js"></script>
+    <script type="text/javascript" src="{{ ASSET_PATH }}/bootstrap/js/jquery-1.11.2+bootstrap+jquery-ui-1.11.2.min.js"></script>
+    <script type="text/javascript" src="{{ ASSET_PATH }}/bootstrap/js/jquery.cookie.min.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 {% if page.scripts %}
   {% for js in page.scripts %}
