@@ -22,7 +22,7 @@ description: Il sito presenta report periodici sull'andamento dei treni pendolar
 locale:
   language: it
   territory: IT
-image: http://monitor-treni-files.fabriziotarizzo.org/images/Stazione_Villanova.jpg
+image: http://monitor-treni.fabriziotarizzo.org/images/Stazione_Villanova.jpg
 
 #Social: FB open graph, Twitter card, ...
 social:
